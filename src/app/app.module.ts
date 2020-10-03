@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { GithubComponent } from './github/github.component';
 import { BitcoinComponent } from './bitcoin/bitcoin.component';
 import { BitcoinService } from './bitcoin/bitcoin.service';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports:      [ 
