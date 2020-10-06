@@ -18,7 +18,8 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
       {path: 'github', component: GithubComponent}, 
-      {path: 'bitcoin', component: BitcoinComponent}, 
+      {path: 'bitcoin', component: BitcoinComponent},
+      {path: 'bitcoin/:index', component: BitcoinComponent},  
          
             
     ])
