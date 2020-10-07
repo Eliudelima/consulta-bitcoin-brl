@@ -10,6 +10,7 @@ import { BitcoinComponent } from './bitcoin/bitcoin.component';
 import { BitcoinService } from './bitcoin/bitcoin.service';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GithubComponent } from './github/github.component';
 
 
 
@@ -26,12 +27,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
        
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
-      {path: 'bitcoin', component: BitcoinComponent}, 
+      {path: 'bitcoin', component: BitcoinComponent},
+       {path: 'github', component: GithubComponent}, 
                    
             
     ])
   ],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, BitcoinComponent ],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, BitcoinComponent, GithubComponent ],
   bootstrap:    [ AppComponent ],
   providers: [BitcoinService],
  
