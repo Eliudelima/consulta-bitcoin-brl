@@ -19,8 +19,7 @@ import { RouterModule } from '@angular/router';
       {path: '', component: HomeComponent},
       {path: 'github', component: GithubComponent}, 
       {path: 'bitcoin', component: BitcoinComponent},
-      {path: 'bitcoin/:index', component: BitcoinComponent},  
-         
+               
             
     ])
   ],
