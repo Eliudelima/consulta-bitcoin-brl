@@ -1,3 +1,35 @@
-<p>
-Git Hub - Eliude de Lima Felizindo
-</p>
+<section>
+  <aside>
+    <h2 class="sub-title">Equipe</h2>
+    <!-- diretiva de atributo click -->
+   
+    <a (click)="getRepo('EliudeLima')" >Eliude</a>
+   
+  </aside>
+
+  <main>
+    <div class="card" class="card p-2 mt-2 ml-2 mr-2 center">
+      <div class="card-body">
+        <h6 class="card-title text-center"><h2 class="sub-title">{{this.topName || 'Selecione um usuário no canto esquerdo'}}</h2></h6>
+      </div>
+
+      <!-- diretiva de atributo ngFor -->
+      <ul class="list-group" *ngFor="let data of this.currentData">
+
+        <li class="list-group-item">
+          <b>Repositórios:  </b> {{data.name || 'Nome não encontrado'}}<br>
+          <b>Stars:  </b> <span class="badge badge-primary badge-pill">{{data.stargazers_count || 'Sem avaliação'}} </span><br>
+          <b>Descrição:</b> {{data.description || 'Sem descrição'}}<br>
+          <b>URL :</b> <a href="{{data.clone_url}}" target="blank">{{data.clone_url}}</a><br>
+        </li>
+
+      </ul>
+    </div>
+
+    <footer>
+      <p>Todos os direitos reservados 2020</p>
+    </footer>
+  
+  </main>
+  
+</section>
