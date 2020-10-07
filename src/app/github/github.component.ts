@@ -36,3 +36,4 @@ export class GithubComponent implements OnInit {
   }
 
 }
+//https://stackblitz.com/edit/angular-exercise-github-user-search?file=src%2Fapp%2Fapp.module.ts
