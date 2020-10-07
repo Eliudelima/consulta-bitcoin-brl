@@ -1,7 +1,6 @@
+
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 
 interface Response {
   name:String,
@@ -35,28 +34,5 @@ export class GithubComponent implements OnInit {
       this.currentData = data;
     });
   }
-  
-  describe () => {
-  let component: GithubComponent;
-  let fixture: ComponentFixture<GithubComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ GithubComponent ]
-    })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(GithubComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 }
-
-
-
