@@ -11,7 +11,7 @@ import { BitcoinComponent } from './bitcoin/bitcoin.component';
 import { BitcoinService } from './bitcoin/bitcoin.service';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { GithubDirective } from './github/github.directive';
+
 
 
 @NgModule({
@@ -33,7 +33,7 @@ import { GithubDirective } from './github/github.directive';
             
     ])
   ],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, GithubComponent, BitcoinComponent, GithubDirective ],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, GithubComponent, BitcoinComponent ],
   bootstrap:    [ AppComponent ],
   providers: [BitcoinService],
  
