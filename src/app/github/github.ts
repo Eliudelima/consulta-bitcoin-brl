@@ -1,16 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { GithubComponent } from './github.component';
+import { GithubComponent } from "./github.component";
 
-describe('GithubComponent', () => {
+export class GithubTs implements OnInit {
+
+describe("GithubComponent", () => {
   let component: GithubComponent;
   let fixture: ComponentFixture<GithubComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GithubComponent ]
-    })
-    .compileComponents();
+      declarations: [GithubComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +20,8 @@ describe('GithubComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
+
