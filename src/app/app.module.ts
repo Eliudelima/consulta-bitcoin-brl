@@ -10,6 +10,8 @@ import { GithubComponent } from './github/github.component';
 import { BitcoinComponent } from './bitcoin/bitcoin.component';
 import { BitcoinService } from './bitcoin/bitcoin.service';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GithubDirective } from './github/github.directive';
 
 
 @NgModule({
@@ -17,6 +19,11 @@ import { RouterModule } from '@angular/router';
     BrowserModule, 
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    
+   
+
+   
        
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
@@ -26,7 +33,7 @@ import { RouterModule } from '@angular/router';
             
     ])
   ],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, GithubComponent, BitcoinComponent ],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, GithubComponent, BitcoinComponent, GithubDirective ],
   bootstrap:    [ AppComponent ],
   providers: [BitcoinService],
  
