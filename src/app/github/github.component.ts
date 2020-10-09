@@ -1,26 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { BitcoinService } from './bitcoin.service';
+import { GithubService } from './github.service';
 
 @Component({
-  selector: 'app-bitcoin',
-  templateUrl: './bitcoin.component.html',
-  styleUrls: ['./bitcoin.component.css']
+  selector: 'app-github',
+  templateUrl: './github.component.html',
+  styleUrls: ['./github.component.css']
 })
-export class BitcoinComponent implements OnInit {
-  name = 'BitCoin$';
+export class GithubComponent implements OnInit {
+  name = 'Github$';
 
 
 
-  constructor( public bitcoinService: BitcoinService ) { }
+  constructor( public githubService: BitcoinService ) { }
 
   ngOnInit() {
     this.update();
   }
   getCurrentPrice(){
-    return this.bitcoinService.currentPrice;
+    return this.githubService.currentPrice;
   }
 
   update() {
-    this.bitcoinService.update();
+    this.githubService.update();
   }
 }

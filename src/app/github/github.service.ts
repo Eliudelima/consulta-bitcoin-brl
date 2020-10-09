@@ -24,7 +24,7 @@ interface PriceUpdate {
 
 
 @Injectable()
-export class BitcoinService {
+export class GithubService {
   currentPrice: Response;
   lastUpdate: Date;
 
