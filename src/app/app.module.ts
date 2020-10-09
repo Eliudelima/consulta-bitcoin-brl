@@ -11,6 +11,7 @@ import { BitcoinService } from './bitcoin/bitcoin.service';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GithubComponent } from './github/github.component';
+import { GithubService } from './github/github.service';
 
 
 
@@ -35,7 +36,7 @@ import { GithubComponent } from './github/github.component';
   ],
   declarations: [ AppComponent, HelloComponent, HomeComponent, BitcoinComponent, GithubComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [BitcoinService],
+  providers: [BitcoinService, GithubService],
  
 })
 export class AppModule { }
