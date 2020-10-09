@@ -29,7 +29,7 @@ import { GithubService } from './github/github.service';
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
       {path: 'bitcoin', component: BitcoinComponent},
-       {path: 'github', component: GithubComponent}, 
+      {path: 'github', component: GithubComponent}, 
                    
             
     ])
