@@ -2,46 +2,38 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 interface Response {
-  time: {
-    updated: string;
-  };
-  disclaimer: string;
-  bpi: {
-    [key in 'USD' | 'BRL' ]: {
-      symbol: string;
-      description: string;
-      rate_float: number;
-      rate: string;
-    }
-  };
+  name:String,
+  full_name:String,
+  stargazers_count: Number,
+  description: String,
 }
 
-interface PriceUpdate {
-  timestamp: Date;
-  USD: number;
-  BRL: number;
-}
+@Component({
+  selector: 'app-github',
+  templateUrl: './github.component.html',
+  styleUrls: ['./github.component.css']
+})
 
+export class GitComponent implements OnInit {
 
-@Injectable()
-export class GithubService {
-  currentPrice: Response;
-  lastUpdate: Date;
+  currentData: Response;
+  topName: String;
 
-  updateList: Array<PriceUpdate> = [];
   constructor(private http: HttpClient) { }
 
-  update() {
-    this.http.get<Response>('https://api.coindesk.com/v1/bpi/currentprice/BRL.json')
+  ngOnInit(): void {
+    this.getRepo(" ");
+  }
+
+
+
+  getRepo(user) {
+
+  
+    this.http.get<Response>('https://api.github.com/users/'Eliudelima'/repos')
     .subscribe(data => {
-      this.lastUpdate = new Date();
-      this.currentPrice = data;
-      this.updateList.push({
-        timestamp: this.lastUpdate,
-        USD: this.currentPrice.bpi.USD.rate_float,
-        BRL: this.currentPrice.bpi.BRL.rate_float
-      });
-    });
+      this.currentData = data;
+    
   }
 
 }
