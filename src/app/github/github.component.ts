@@ -11,7 +11,7 @@ export class GithubComponent implements OnInit {
 
 
 
-  constructor( public githubService: BitcoinService ) { }
+  constructor( public githubService: GithubService ) { }
 
   ngOnInit() {
     this.update();
