@@ -23,6 +23,6 @@ export class BitcoinComponent implements OnInit {
   update() {
     this.bitcoinService.update();
   }
-}
+};
 
 
